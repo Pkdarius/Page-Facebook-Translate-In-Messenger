@@ -1,7 +1,7 @@
 const handle = require('../handles/handle');
 
 module.exports.webhookGet = (req, res) => {
-    let VERIFY_TOKEN = "HaiHa0303";
+    let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
     let mode = req.query['hub.mode'];
     let token = req.query['hub.verify_token'];
